@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class TaskTest {
     @Test
     public void testSimpleTaskMatches() {
-        SimpleTask task = new SimpleTask (1, "Позвонить домой");
+        SimpleTask task = new SimpleTask(1, "Позвонить домой");
 
         boolean expected = true;
         boolean actual = task.matches("Позвонить");
@@ -16,9 +16,10 @@ class TaskTest {
         Assertions.assertTrue(actual);
 
     }
+
     @Test
     public void testSimpleTaskNotMatches() {
-        SimpleTask task = new SimpleTask (1, "Позвонить домой");
+        SimpleTask task = new SimpleTask(1, "Позвонить домой");
 
         boolean expected = true;
         boolean actual = task.matches("Написать");
@@ -26,6 +27,7 @@ class TaskTest {
         Assertions.assertFalse(actual);
 
     }
+
     @Test
     public void shouldFindQueryInTaskFalse() {
         Task task = new Task(1);
@@ -35,9 +37,10 @@ class TaskTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void shouldFindQueryInEpicFalse() {
-        String[] subtasks = { "Позвонить домой", "Написать-маме", "Отправить-папе"};
+        String[] subtasks = {"Позвонить домой", "Написать-маме", "Отправить-папе"};
         Task epic = new Epic(1, subtasks);
 
         boolean expected = false;
