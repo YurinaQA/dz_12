@@ -8,6 +8,7 @@ public class Epic extends Task {
         this.subtasks = subtasks;
     }
 
+
     @Override
     public boolean matches(String query) {
         for (String subtask : subtasks) {

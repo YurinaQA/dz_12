@@ -153,7 +153,6 @@ class TodosTest {
         todos.add(simpleTask);
         todos.add(epic);
         todos.add(meeting);
-
         Task[] expected = {};
         Task[] actual = todos.search("Выпуск");
 
