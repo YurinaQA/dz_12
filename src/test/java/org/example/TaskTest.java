@@ -40,7 +40,7 @@ class TaskTest {
 
     @Test
     public void shouldFindQueryInEpicFalse() {
-        String[] subtasks = {"Позвонить домой", "Написать - маме", "Отправить - папе"};
+        String[] subtasks = {"Позвонить домой", "Написать-маме", "Отправить-папе"};
         Task epic = new Epic(1, subtasks);
 
         boolean expected = false;
